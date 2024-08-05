@@ -14,6 +14,26 @@ def animals():
     # TODO 1. Ask the user which animal they want, then see and
     #  hear the animal they chose using one of the methods below.
 
+    while True:
+        ani = simpledialog.askstring(title='ANIMAL FARM: TYPE ANSWER EXIT TO END LOOP', prompt="What animal do you want?")
+        if ani == "dog":
+            woof()
+
+        if ani == "cat":
+            meow()
+
+        if ani == "cow":
+            moo()
+
+        if ani == "duck":
+            quack()
+
+        if ani == "llama":
+            llama_scream()
+        if ani == "exit":
+            break
+
+
     # TODO 2. Make it so that the user can keep entering new animals.
 
     # TODO 3. If the user enters 'exit', stop the program
@@ -48,27 +68,27 @@ def show_image(filename=None):
 def moo():
     show_image('cow.jpg')
     playsound('moo.wav')
-
+    print("played")
 
 def quack():
     show_image('duck.jpg')
     playsound('quack.wav')
-
+    print("played")
 
 def woof():
     show_image('dog.jpg')
     playsound('woof.wav')
-
+    print("played")
 
 def meow():
     show_image('cat.jpg')
     playsound('meow.wav')
-
+    print("played")
 
 def llama_scream():
     show_image('llama.jpg')
     playsound('llama.wav')
-
+    print("played")
 
 if __name__ == '__main__':
     animals()
